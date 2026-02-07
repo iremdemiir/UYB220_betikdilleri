@@ -1,0 +1,44 @@
+a=5
+b=4
+c=a+b
+print(c)
+d='bes'
+e='altı'
+print(d+e)
+x=list()
+y=['abc',5,6,3['ab',25]]
+
+
+a=int(input('1.sayıyı gir'))
+b=input('2.sayıyı gir')
+print(type(a))
+print(type(b))
+b=int(b)
+c=a-b
+print(type(c))
+if c>0:
+    print('1.sayı büyüktür')
+elif c<0:
+    print('2.sayı büyüktür')
+else:
+    print('iki sayı eşittir')
+
+import random
+r = random.random()
+print(r)
+
+import random
+r = random.random()
+if r < 0.5:
+    print('yazı')
+else:
+    print('tura')
+print(r)
+
+import random
+r = random.randint(1,6)
+print(r)
+if r%2==0:
+    print('galatasaray kazandı')
+else:
+    print('fenerbahçe kazandı')
