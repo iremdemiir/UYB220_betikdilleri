@@ -1,0 +1,17 @@
+import requests
+from bs4 import BeautifulSoup
+
+def get_url(url):
+    r = requests.get(url)
+    soup = BeautifulSoup(r.content, 'html.parser')
+    liste = soup.find_all("div", {"class": "col-lg-6"})
+    for i in liste:
+        for link in i.findAll('a'):
+            my_link = link.get('href') + "\n"
+            yeni_link = '{}{}'.format('https://www.milligazate.com.tr/', my_link)
+            print(yeni_link)
+            with open('ırem.txt',"a", encoding="utf-8") as file:
+                file.write(yeni_link)
+
+x='https://www.milligazete.com.tr/arsiv/2021-07-26'
+get_url(i)
