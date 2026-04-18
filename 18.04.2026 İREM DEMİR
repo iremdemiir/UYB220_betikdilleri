@@ -1,0 +1,79 @@
+echo "binary gir (0 veya 1)"
+read binary1
+
+if [ "$binary1" = "0" ] || [ "$binary1" = "1" ]; then
+    echo "bir daha binary gir (0 veya 1)"
+    read binary2
+
+    if [ "$binary2" = "0" ] || [ "$binary2" = "1" ]; then
+        echo "seçim gir: AND / OR / NOT"
+        read secim
+
+        if [ "$secim" = "AND" ]; then
+            if [ "$binary1" = "1" ] && [ "$binary2" = "1" ]; then
+                echo "1"
+            else
+                echo "0"
+            fi
+
+        elif [ "$secim" = "OR" ]; then
+            if [ "$binary1" = "1" ] || [ "$binary2" = "1" ]; then
+                echo "1"
+            else
+                echo "0"
+            fi
+        elif [ "$secim" = "NOT" ]; then
+            if [ "$binary1" = "0" ] && [ "$binary2" = "0" ]; then
+                echo "1"
+            else
+                echo "0"
+            fi
+        else
+            echo "geçersiz seçim"
+        fi
+    else
+        echo "hata"
+    fi
+else
+    echo "hata"
+fi
+
+---------------------------------------------------------------------
+echo "adınızı giriniz:"
+read ad
+echo "yaşınızı giriniz:"
+read yas
+echo "$ad sen $yas yasındasınız"
+
+----------------------------------------------------------------------
+  GNU nano 7.2                                                                                                 ikisayidortislem.sh                                                                                                          
+echo "ilk sayıyı giriniz:"
+read sayi1
+echo "ikinci sayıyı giriniz:"
+read sayi2 
+echo  "işlemi seçin"
+echo " toplama"
+echo " çıkarma" 
+echo " bölme"  
+echo " çarpma"
+read secim
+
+if [ "$secim" = "toplama" ]; then
+    toplam=$((sayi1 + sayi2))
+    echo "toplam = $toplam"
+
+elif [ "$secim" = "çıkarma" ]; then
+    cikarma=$((sayi1 - sayi2))
+    echo "çıkarma = $cikarma"
+
+elif [ "$secim" = "çarpma" ]; then
+    carpma=$((sayi1 * sayi2))
+    echo "çarpım = $carpma"
+
+elif [ "$secim" = "bölme" ]; then
+    bolme=$((sayi1 / sayi2))
+    echo "bölüm = $bolme"
+
+else
+    echo "geçersiz seçim"
+fi
