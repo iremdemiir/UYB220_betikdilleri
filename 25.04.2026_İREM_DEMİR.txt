@@ -1,0 +1,16 @@
+<html>
+<body>
+<h1>Günün Tarihi</h1>
+<p id="gununTarihi"></p>
+
+<script type="text/javascript">
+    /* Birden fazla satırdan oluşan yorumlar için bu güzel.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.  */
+    document.getElementById("gununTarihi").innerHTML = Date();
+    
+    //Tek satırlık bir not.
+</script>
+
+</body>
+</html>
+
