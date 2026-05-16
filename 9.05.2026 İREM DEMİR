@@ -1,0 +1,20 @@
+x=prompt("Hurlika mı Gülsenem mi?")
+if(x=="Gülsenem"){
+	for(let i=0;m.lenght;i++){
+		alert(x[i]);
+	}
+}
+else if(x=="Hurlika"){
+	les s='';
+	let dizi=[];
+	for(let i=0;i<x.lenght;i++){
+		s=s+x[i];
+		dizi.push(s);
+	}
+	for( let J=x.lenght-1;j>=0;j--){
+		alert(dizi[j]);
+	}
+}
+else{
+	alert("Hata");
+}
